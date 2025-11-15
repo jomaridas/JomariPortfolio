@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Services | Jomari Abubo</title>
+    <script src="https://kit.fontawesome.com/502646584c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="liquid-body">
+        <nav class="glass-nav">
+            <img src="images/logo.png" class="logo" alt="Logo">
+            <ul id="sidemenu">
+                <li><a href="index.html#header">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li> 
+                <li><a href="index.html#portfolio">Portfolio</a></li> 
+                <li><a href="index.html#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+            
+        </div>
+    </nav>
+
+    <div id="services-index" class="sub-page-section">
+        <div class="container">
+            <h1 class="sub-title">Explore My Works</h1>
+           
+            
+             <div class="work-list">
+            <div class="work">
+                    <img src="images/1.png" alt="Layout Design Example">
+                <div class="layer">
+                    <h3>Layout Design</h3>
+                    <p>We Develop the Visual Identity of Your Business.</p>
+                    <a href="layout-design.html#layout-design"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                    <img src="images/2.png" alt="Web Design Example">
+                <div class="layer">
+                    <h3>Web Design</h3>
+                    <p>A strategic approach to website design and development.</p>
+                    <a href="web-design.html#web-design"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                    <img src="images/3.png" alt="System Developer Example">
+                <div class="layer">
+                    <h3>System Developer</h3>
+                    <p>Discover the Impressive World of Dynamic App Development.</p>
+                    <a href="system-developer.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <a href="index.html#services" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+        </div>
+        
+    </div>
+
+    <div class="copyright">
+        <p>2025 © Jomari Abubo Portfolio. All Rights Reserved. <i class="fa-solid fa-heart"></i></p>
+    </div>
+    
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){ sidemenu.style.right = "0"; }
+        function closemenu(){ sidemenu.style.right = "-250px"; }
+    </script>
+</body>
+</html>

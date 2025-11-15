@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editing Detail | Jomari Abubo</title>
+     <script src="https://kit.fontawesome.com/502646584c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    
+   
+</head>
+<body class="liquid-body">
+        <nav class="glass-nav">
+            <img src="images/logo.png" class="logo" alt="Logo">
+            <ul id="sidemenu">
+                <li><a href="index.html#header">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li> 
+                <li><a href="index.html#portfolio">Portfolio</a></li> 
+                <li><a href="index.html#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+            
+        </div>
+    </nav>
+
+
+    <div id="editing-detail" class="sub-page-section">
+        <div class="container">
+            <h1 class="sub-title" style="margin-top: 50px;"><i class="fa-solid fa-pen-to-square" style="margin-right: 10px;"></i>Web Design Services</h1>
+            
+            <div class="detail-card full-width">
+                <h2>Web Design</h2>
+
+                <div class="gallery-container">
+                    <div class="main-image-display" data-description="">
+                         <!-- Main image will display the full-size version of the active thumbnail -->
+                        <img src="https://placehold.co/1200x675/400d20/ff004f?text=MAIN+VIEW%0AProfessional+Retouching" id="mainGalleryImage" alt="Main Editing Example">
+                    </div>
+                    
+                    <div class="thumbnail-gallery" id="thumbnailGallery">
+                        <!-- Thumbnails using unique placeholders and data attributes -->
+                        <img src="web design/3.png" 
+                            data-full="web design/3.png" 
+                            data-description="Professional Photo Retouching: Before & After Example" 
+                            class="active-thumb" alt="Thumbnail 1">
+                          
+                            <img src="web design/2.png" 
+                            data-full="web design/2.png" 
+                            data-description="Professional Photo Retouching: Before & After Example" 
+                            class="active-thumb" alt="Thumbnail 1">
+                            
+                        <img src="web design/1.png" 
+                            data-full="web design/1.png" 
+                            data-description="Cinematic Color Grading: Mood & Tone Adjustment" 
+                            alt="Thumbnail 2">
+
+                        <img src="web design/4.png" 
+                            data-full="web design/4.png" 
+                            data-description="Professional Photo Retouching: Before & After Example" 
+                            class="active-thumb" alt="Thumbnail 1">
+                            
+                        <img src="web design/5.png" 
+                            data-full="web design/5.png" 
+                            data-description="Cinematic Color Grading: Mood & Tone Adjustment" 
+                            alt="Thumbnail 2">
+
+                        <img src="web design/6.png" 
+                            data-full="web design/6.png"
+                            data-description="Professional Photo Retouching: Before & After Example" 
+                            class="active-thumb" alt="Thumbnail 1">
+                            
+                        <img src="web design/7.png" 
+                            data-full="web design/7.png" 
+                            data-description="Cinematic Color Grading: Mood & Tone Adjustment" 
+                            alt="Thumbnail 2">
+                            
+                       
+                    </div>
+                </div>
+
+                <div class="detail-nav-buttons">
+                    <!-- Placeholder link to next service detail page -->
+                    <a href="layout-design.html" class="btn btn-secondary"><i class="fa-brands fa-app-store-ios"></i>Layout Design</a>
+                    <!-- Placeholder link to next service detail page -->
+                    <a href="system-developer.html" class="btn btn-secondary"><i class="fa-solid fa-pen-nib"></i>System Developer</a>
+                </div>
+            </div>
+
+            <a href="index.html#portfolio" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>2025 © Jomari Abubo Portfolio. All Rights Reserved. <i class="fa-solid fa-heart"></i></p>
+    </div>
+    
+    <script>
+        // Toggle mobile menu visibility
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){ sidemenu.style.right = "0"; }
+        function closemenu(){ sidemenu.style.right = "-250px"; }
+
+        // Gallery functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mainImage = document.getElementById('mainGalleryImage');
+            const mainImageDisplay = document.querySelector('.main-image-display');
+            const thumbnails = document.querySelectorAll('#thumbnailGallery img');
+
+            thumbnails.forEach(thumb => {
+                thumb.addEventListener('click', function() {
+                    // 1. Remove active class from all thumbnails
+                    thumbnails.forEach(t => t.classList.remove('active-thumb'));
+                    // 2. Add active class to the clicked thumbnail
+                    this.classList.add('active-thumb');
+
+                    // 3. Change main image source and description
+                    mainImage.src = this.dataset.full;
+                    mainImageDisplay.setAttribute('data-description', this.dataset.description);
+                    
+                    // Optional: Update image alt text
+                    mainImage.alt = this.alt; 
+                });
+            });
+            
+            // Initial load check: if the main image source is not set, use the active thumbnail's data.
+            const initialActiveThumb = document.querySelector('.thumbnail-gallery img.active-thumb');
+            if (mainImage.src.includes('logo.png') || mainImage.src.includes('placehold.co/1200x675/400d20/ff004f') && initialActiveThumb) {
+                 mainImage.src = initialActiveThumb.dataset.full;
+                 mainImageDisplay.setAttribute('data-description', initialActiveThumb.dataset.description);
+            }
+        });
+    </script>
+</body>
+</html>

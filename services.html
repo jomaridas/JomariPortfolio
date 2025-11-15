@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Services | Jomari Abubo</title>
+    <script src="https://kit.fontawesome.com/502646584c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="liquid-body">
+        <nav class="glass-nav">
+            <img src="images/logo.png" class="logo" alt="Logo">
+            <ul id="sidemenu">
+                <li><a href="index.html#header">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li> 
+                <li><a href="index.html#portfolio">Portfolio</a></li> 
+                <li><a href="index.html#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+            
+        </div>
+    </nav>
+
+    <div id="services-index" class="sub-page-section">
+        <div class="container">
+            <h1 class="sub-title">Explore My Services</h1>
+            <p style="margin-bottom: 40px; color: #ababab;">Click on any service below to view detailed information, scope, and process.</p>
+            
+            <div class="services-list-detail">
+                
+                <a href="editing-detail.html" class="service-link-card">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <h2>Editing Service</h2>
+                    <p>Expert photo and video retouching, color grading, and motion graphics production.</p>
+                </a>
+                
+                <a href="app-designer-detail.html" class="service-link-card">
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2>App Designer (UI/UX)</h2>
+                    <p>Creating intuitive, user-friendly, and engaging designs for mobile applications.</p>
+                </a>
+
+                <a href="web-developer-detail.html" class="service-link-card">
+                    <i class="fa-solid fa-pen-nib"></i>
+                    <h2>Web Developer (Front-End)</h2>
+                    <p>Building modern, responsive, and performance-optimized websites using clean code.</p>
+                </a>
+                
+            </div>
+
+            <a href="index.html#contact" class="btn">Start a Project</a>
+            <a href="index.html#services" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+        </div>
+        
+    </div>
+
+    <div class="copyright">
+        <p>2025 © Jomari Abubo Portfolio. All Rights Reserved. <i class="fa-solid fa-heart"></i></p>
+    </div>
+    
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){ sidemenu.style.right = "0"; }
+        function closemenu(){ sidemenu.style.right = "-250px"; }
+    </script>
+</body>
+</html>

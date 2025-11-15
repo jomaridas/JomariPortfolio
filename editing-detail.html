@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editing Detail | Jomari Abubo</title>
+    <script src="https://kit.fontawesome.com/502646584c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="liquid-body">
+        <nav class="glass-nav">
+            <img src="images/logo.png" class="logo" alt="Logo">
+            <ul id="sidemenu">
+                <li><a href="index.html#header">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li> 
+                <li><a href="index.html#portfolio">Portfolio</a></li> 
+                <li><a href="index.html#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+            
+        </div>
+    </nav>
+
+
+    <div id="editing-detail" class="sub-page-section">
+        <div class="container">
+            <h1 class="sub-title"><i class="fa-solid fa-pen-to-square" style="margin-right: 10px; margin-top: 50px;"></i> Editing Service</h1>
+            
+            <div class="detail-card full-width">
+                <p><strong>Expert Photo and Video Editing:</strong> I provide comprehensive editing services tailored to meet brand guidelines and visual storytelling needs. This includes retouching, color correction, composition adjustments, and motion graphic implementation for video projects.</p>
+                <p style="margin-top: 20px;">My focus is on delivering polished, professional content that captures attention and conveys your message clearly. Proficient in Adobe Creative Suite (Photoshop, Premiere Pro, After Effects).</p>
+                
+                <h3 style="margin-top: 30px; color: #b54769;">Key Deliverables:</h3>
+                <ul>
+                    <li>High-end portrait and commercial photo retouching.</li>
+                    <li>Cinematic color grading and video post-production.</li>
+                    <li>Custom motion graphics and title sequences.</li>
+                </ul>
+
+                <div class="detail-nav-buttons">
+                    <a href="app-designer-detail.html" class="btn btn-secondary"><i class="fa-brands fa-app-store-ios"></i>App Designer</a>
+                    <a href="web-developer-detail.html" class="btn btn-secondary"><i class="fa-solid fa-pen-nib"></i>Web Developer</a>
+                </div>
+            </div>
+
+            <a href="services.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to All Services</a>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>2025 © Jomari Abubo Portfolio. All Rights Reserved. <i class="fa-solid fa-heart"></i></p>
+    </div>
+    
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){ sidemenu.style.right = "0"; }
+        function closemenu(){ sidemenu.style.right = "-250px"; }
+    </script>
+</body>
+</html>
