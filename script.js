@@ -27,7 +27,7 @@ function closemenu(){
 }
 
 // Google Sheets Form Submission Logic
-const scriptURL = 'https://script.google.com/macros/s/AKfycbx1Cf1rFEsqcO-yVlaX-qoKLYtvh2YE360z9P10zqXp2AqdGnhN81xSmnDRQJb_EE4LlQ/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyKSrSlS8BYraNH4NdrlskY9ikBSE8_OZv4FOUpG4bqMCnjRuQBa8ZvDjAEJps4i7HqYg/exec'
 const form = document.forms['submit-to-google-sheet']
 const msg = document.getElementById("msg")
 
@@ -335,4 +335,5 @@ document.getElementById('hire-me-action-btn').addEventListener('click', function
     
     // 5. Clean up the temporary link
     document.body.removeChild(downloadLink);
+
 });
