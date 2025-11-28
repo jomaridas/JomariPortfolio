@@ -104,30 +104,36 @@
             }
         });
     </script>
-        <!-- ================= CHATBOT BUTTON ================= -->
-        <div class="chatbot-btn" id="chat-btn">
-            <!-- Inline SVG Thunder Icon -->
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="yellow" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13 2L3 14H12L11 22L21 10H14L13 2Z" />
-            </svg>
-        </div>
+      <!-- ================= CHATBOT BUTTON ================= -->
+ <!-- Floating Chatbot Button -->
+    <div id="chat-btn" class="chatbot-btn">
+        <i class="fas fa-comment-dots"></i>
+    </div>
 
-        <!-- CHATBOX / AI WINDOW -->
-        <div class="chatbox" id="chatbox">
-            <div class="chat-header">
-                <span>Jomari Assistant</span>
-                <i class="fa-solid fa-xmark" id="chat-close"></i>
-            </div>
-
-            <div class="chat-messages" id="chat-messages">
-                <div class="bot-msg">👋 Hello! I'm Jomari. How can I help you today?</div>
-            </div>
-
-            <div class="chat-input-area">
-                <input type="text" id="chat-input" placeholder="Type a message...">
-                <button id="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+    <!-- Chatbox Window -->
+    <div id="chatbox" class="chatbox">
+        <div class="chat-header">
+            <span>JOM AI Assistant</span>
+            <div class="flex items-center gap-3">
+                <i class="fas fa-trash-alt" title="Clear Chat History" onclick="clearChat()"></i>
+                <i id="chat-close" class="fas fa-times" title="Close Chat"></i>
             </div>
         </div>
+        
+        <div id="chat-messages" class="chat-messages">
+            <!-- Messages will be appended here -->
+            <div id="welcome-screen">
+                <!-- Welcome content injected by JS -->
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Ask me about Jomari..." autocomplete="off">
+            <button id="send-btn" disabled>
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+
 
     
 
