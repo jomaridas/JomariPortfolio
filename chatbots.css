@@ -49,8 +49,8 @@
             position: fixed;
             bottom: 90px;
             right: 25px;
-            width: 300px;
-            height: 350px;
+            width: 350px;
+            height: 450px;
             display: none; /* hidden initially */
             flex-direction: column;
             /* Glassmorphism chatbox container */
