@@ -1,153 +1,217 @@
-/* =================== FLOATING CHATBOT BUTTON =================== */
+/* =================== FLOATING CHATBOT BUTTON (Responsive) =================== */
+        .chatbot-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            /* Modern, slightly glowing glass effect */
+            background: rgba(0, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 255, 0.5);
+            box-shadow: 0 0 25px cyan, inset 0 0 15px rgba(0,255,255,0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 999999;
+            transition: 0.3s ease;
+        }
 
+        .chatbot-btn:hover {
+            transform: scale(1.13);
+            box-shadow: 0 0 35px cyan, inset 0 0 20px rgba(0,255,255,0.8);
+        }
 
-/* Mobile adjustment */
-@media screen and (max-width: 768px) {
-    .scrollTopBtn {
-        bottom: 90px;
-        right: 25px;
-        width: 50px;
-        height: 50px;
-    }
+        .chatbot-btn i {
+            color: white;
+            font-size: 20px; /* Default desktop size */
+            transition: 0.3s ease;
+        }
 
-    .scrollTopBtn i {
-        font-size: 18px;
-    }
-}
-.chatbot-btn {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: rgba(0, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 255, 255, 0.5);
-    box-shadow: 0 0 25px cyan, inset 0 0 15px rgba(0,255,255,0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    z-index: 999999;
-    transition: 0.3s ease;
-}
+        /* Mobile adjustment for Button and Icon */
+        @media screen and (max-width: 768px) {
+            .chatbot-btn {
+                bottom: 90px; 
+                right: 5%;   
+                width: 55px; 
+                height: 55px;
+            }
 
-.chatbot-btn:hover {
-    transform: scale(1.13);
-    box-shadow: 0 0 35px cyan, inset 0 0 20px rgba(0,255,255,0.8);
-}
+            .chatbot-btn i {
+                font-size: 15px; 
+            }
+        }
 
+        /* =================== CHATBOX (Responsive) =================== */
+        .chatbox {
+            position: fixed;
+            bottom: 90px;
+            right: 25px;
+            width: 300px;
+            height: 350px;
+            display: none; /* hidden initially */
+            flex-direction: column;
+            /* Glassmorphism chatbox container */
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.25);
+            backdrop-filter: blur(25px);
+            box-shadow: 0 8px 35px rgba(0, 255, 255, 0.2),
+                        inset 0 0 20px rgba(255,255,255,0.05);
+            overflow: hidden;
+            z-index: 999999;
+            animation: popUp 0.25s ease;
+        }
 
-.chatbot-btn i {
-    color: white;
-    font-size: 32px;
-}
+        /* Mobile view for Chatbox: Make it take up most of the screen */
+        @media screen and (max-width: 768px) {
+            .chatbox {
+                width: 90vw;     /* Fluid width, 90% of viewport */
+                height: 70vh;    /* Fluid height, 70% of viewport */
+                bottom: 90px;    /* Moved up to clear mobile navigation/keyboard area */
+                right: 5%;       /* Center alignment by using equal margins (5% on right) */
+                left: 5%;        /* Added left for better centering clarity */
+            }
+        }
 
-/* =================== CHATBOX =================== */
-.chatbox {
-    position: fixed; /* key: floating independent of page flow */
-    bottom: 110px;
-    right: 25px;
-    width: 360px;
-    height: 480px;
-    display: none; /* hidden initially */
-    flex-direction: column;
-    background: rgba(255, 255, 255, 0.06);
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.25);
-    backdrop-filter: blur(25px);
-    box-shadow: 0 8px 35px rgba(0, 255, 255, 0.2),
-                inset 0 0 20px rgba(255,255,255,0.05);
-    overflow: hidden;
-    z-index: 999999;
-    animation: popUp 0.25s ease;
-}
+        /* =================== CHATBOX COMPONENTS =================== */
+        .chat-header {
+            padding: 15px;
+            background: rgba(0,255,255,0.15);
+            box-shadow: 0 2px 10px rgba(0,255,255,0.3);
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
 
-/* Mobile view */
-@media screen and (max-width: 768px) {
-    .chatbox {
-        width: 90vw;
-        height: 70vh;
-        bottom: 90px;
-        right: 5%;
-    }
-}
+        .chat-header i {
+            cursor: pointer;
+            font-size: 20px;
+            transition: transform 0.2s;
+        }
 
-/* =================== CHATBOX COMPONENTS =================== */
-.chat-header {
-    padding: 15px;
-    background: rgba(0,255,255,0.15);
-    box-shadow: 0 2px 10px rgba(0,255,255,0.3);
-    font-weight: 600;
-    display: flex;
-    justify-content: space-between;
-    color: white;
-}
+        .chat-header i:hover {
+            transform: scale(1.1);
+        }
 
-.chat-header i {
-    cursor: pointer;
-    font-size: 20px;
-}
+        .chat-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            font-size: 12px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            /* Hide default scrollbar for modern design */
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .chat-messages::-webkit-scrollbar {
+            display: none;
+        }
 
-.chat-messages {
-    flex: 1;
-    padding: 15px;
-    overflow-y: auto;
-    font-size: 15px;
-    color: white;
-}
+        /* MODERN CHAT BUBBLE STYLES */
 
-.user-msg {
-    background: cyan;
-    color: black;
-    padding: 10px 14px;
-    margin: 10px 0;
-    border-radius: 14px;
-    width: fit-content;
-    align-self: flex-end;
-}
+        /* Bot Message (Left Alignment, Glass look) */
+        .bot-msg {
+            /* Glass effect */
+            background: rgba(255, 255, 255, 0.15); 
+            color: white;
+            padding: 10px 14px;
+            /* Margin to push it away from the right edge */
+            margin: 8px 40px 8px 4px; 
+            /* Speech bubble shape: Rounded everywhere except bottom-left corner */
+            border-radius: 16px 16px 16px 4px; 
+            width: fit-content;
+            align-self: flex-start; /* Explicitly align left */
+            max-width: 75%; 
+            font-size: 12px; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
 
-.bot-msg {
-    background: rgba(255,255,255,0.15);
-    padding: 10px 14px;
-    margin: 10px 0;
-    border-radius: 14px;
-    width: fit-content;
-}
+        /* User Message (Right Alignment, Primary Color) */
+        .user-msg {
+            /* Primary blue/cyan color */
+            background: #00BFFF; /* Deep sky blue, opaque */
+            color: #000;
+            padding: 10px 14px;
+            /* Margin to push it away from the left edge */
+            margin: 8px 4px 8px 40px; 
+            /* Speech bubble shape: Rounded everywhere except bottom-right corner */
+            border-radius: 16px 16px 4px 16px; 
+            width: fit-content;
+            align-self: flex-end; /* Explicitly align right */
+            max-width: 75%; 
+            font-size: 12px; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
 
-.chat-input-area {
-    padding: 12px;
-    display: flex;
-    gap: 10px;
-    background: rgba(0,255,255,0.1);
-    border-top: 1px solid rgba(255,255,255,0.2);
-}
+        .chat-input-area {
+            padding: 12px;
+            display: flex;
+            gap: 10px;
+            background: rgba(0,255,255,0.1);
+            border-top: 1px solid rgba(255,255,255,0.2);
+            font-size: 12px;
+        }
 
-.chat-input-area input {
-    flex: 1;
-    padding: 10px;
-    border-radius: 12px;
-    border: none;
-    background: rgba(0,0,0,0.2);
-    color: white;
-}
+        .chat-input-area input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 12px;
+            border: none;
+            background: rgba(0,0,0,0.2);
+            color: white;
+            outline: none; 
+            transition: border 0.2s;
+        }
 
-.chat-input-area button {
-    padding: 10px 14px;
-    border: none;
-    border-radius: 12px;
-    background: cyan;
-    cursor: pointer;
-}
+        .chat-input-area input:focus {
+            border: 1px solid cyan;
+        }
 
-.chat-input-area button i {
-    font-size: 18px;
-    color: black;
-}
+        .chat-input-area button {
+            padding: 10px 14px;
+            border: none;
+            border-radius: 12px;
+            background: cyan;
+            cursor: pointer;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-@keyframes popUp {
-    from { transform: scale(0.7); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
+        .chat-input-area button:hover:not(:disabled) {
+            filter: brightness(0.9);
+            transform: scale(1.05);
+        }
 
+        .chat-input-area button:disabled {
+            background: gray;
+            cursor: not-allowed;
+        }
+
+        .chat-input-area button i {
+            font-size: 15px;
+            color: black;
+        }
+
+        /* Mobile adjustment for Input Area Button */
+        @media screen and (max-width: 768px) {
+            .chat-input-area button {
+                padding: 8px 12px; 
+            }
+            .chat-input-area button i {
+                font-size: 12px; 
+            }
+        }
+
+        @keyframes popUp {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
