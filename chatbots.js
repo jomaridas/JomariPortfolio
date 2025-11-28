@@ -26,7 +26,7 @@
 
         // ================== CONFIGURATION ==================
         // REPLACE THIS WITH YOUR ACTUAL API KEY
-        const API_KEY = ""; // Kept as empty string for security and runtime injection
+        const API_KEY = "AIzaSyAZseMBMPMXlEGIGRxD1Kcgl8hZ94_T2wk"; // Kept as empty string for security and runtime injection
         const MODEL_NAME = "gemini-2.5-flash-preview-09-2025";
 
         // Jomari profile data (Kept and will be used by the AI)
@@ -227,3 +227,4 @@ Guidelines:
                 setTimeout(() => welcomeScreen.style.display = 'none', 500); 
             }
         }
+
