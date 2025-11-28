@@ -68,9 +68,9 @@
         /* Mobile view for Chatbox: Make it take up most of the screen */
         @media screen and (max-width: 768px) {
             .chatbox {
-                width: 90vw;     /* Fluid width, 90% of viewport */
-                height: 70vh;    /* Fluid height, 70% of viewport */
-                bottom: 75px;    /* Moved up to clear mobile navigation/keyboard area */
+                width: 85vw;     /* Fluid width, 90% of viewport */
+                height: 50vh;    /* Fluid height, 70% of viewport */
+                bottom: 90px;    /* Moved up to clear mobile navigation/keyboard area */
                 right: 15%;       /* Center alignment by using equal margins (5% on right) */
                 left: 5%;        /* Added left for better centering clarity */
             }
@@ -216,4 +216,5 @@
         @keyframes popUp {
             from { transform: scale(0.7); opacity: 0; }
             to { transform: scale(1); opacity: 1; }
+
         }
