@@ -6,6 +6,7 @@
     <title>Editing Detail | Jomari Abubo</title>
      <script src="https://kit.fontawesome.com/502646584c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chatbots.css">
     
    
 </head>
@@ -32,7 +33,7 @@
             <h1 class="sub-title" style="margin-top: 50px;"><i class="fa-solid fa-pen-to-square" style="margin-right: 10px;"></i>System Developer Services</h1>
             
             <div class="detail-card full-width">
-                <h2>System Developer</h2>
+                <h2>Web Design</h2>
 
                 <div class="gallery-container">
                     <div class="main-image-display" data-description="">
@@ -42,19 +43,19 @@
                     
                     <div class="thumbnail-gallery" id="thumbnailGallery">
                         <!-- Thumbnails using unique placeholders and data attributes -->
-                        <img src="images/system/1.png" data-full="images/system/1.png" data-description="" class="active-thumb" alt="Thumbnail 1">
-                        <img src="images/system/2.png" data-full="images/system/2.png" data-description="" class="active-thumb" alt="Thumbnail 2">
-                        <img src="images/system/3.png" data-full="images/system/3.png" data-description="" class="active-thumb" alt="Thumbnail 3">
-                        <img src="images/system/4.png" data-full="images/system/4.png" data-description="" class="active-thumb" alt="Thumbnail 4">
-                        <img src="images/system/5.png" data-full="images/system/5.png" data-description="" class="active-thumb" alt="Thumbnail 5">
-                        <img src="images/system/6.png" data-full="images/system/6.png" data-description="" class="active-thumb" alt="Thumbnail 6">
-                        <img src="images/system/7.png" data-full="images/system/7.png" data-description="" class="active-thumb" alt="Thumbnail 7">
-                        <img src="images/system/8.png" data-full="images/system/8.png" data-description="" class="active-thumb" alt="Thumbnail 8">
-                        <img src="images/system/9.png" data-full="images/system/9.png" data-description="" class="active-thumb" alt="Thumbnail 9">
-                        <img src="images/system/10.png" data-full="images/system/10.png" data-description="" class="active-thumb" alt="Thumbnail 10">
-                        <img src="images/system/11.png" data-full="images/system/11.png" data-description="" class="active-thumb" alt="Thumbnail 11">
-                        <img src="images/system/12.png" data-full="images/system/12.png" data-description="" class="active-thumb" alt="Thumbnail 12">
-                        <img src="images/system/13.png" data-full="images/system/13.png" data-description="" class="active-thumb" alt="Thumbnail 13">
+                        <img src="images/system/1.png" data-full="images/system/1.png" data-description="Professional Photo Retouching: Before & After Example" class="active-thumb" alt="Thumbnail 1">
+                        <img src="images/system/2.png" data-full="images/system/2.png" data-description="Professional Photo Retouching: Before & After Example" class="active-thumb" alt="Thumbnail 2">
+                        <img src="images/system/3.png" data-full="images/system/3.png" data-description="Professional Photo Retouching: Before & After Example" class="active-thumb" alt="Thumbnail 3">
+                        <img src="images/system/4.png" data-full="images/system/4.png" data-description="Professional Photo Retouching: Before & After Example" class="active-thumb" alt="Thumbnail 4">
+                        <img src="images/system/5.png" data-full="images/system/5.png" data-description="Professional Photo Retouching: Before & After Example" class="active-thumb" alt="Thumbnail 5">
+                        <img src="images/system/6.png" data-full="images/system/6.png" data-description="Professional Photo Retouching: Before & After Example" class="active-thumb" alt="Thumbnail 6">
+                        <img src="images/system/7.png" data-full="images/system/7.png" data-description="Professional Photo Retouching: Before & After Example" class="active-thumb" alt="Thumbnail 7">
+                        <img src="images/system/8.png" data-full="images/system/8.png" data-description="Professional Photo Retouching: Before & After Example" class="active-thumb" alt="Thumbnail 8">
+                        <img src="images/system/9.png" data-full="images/system/9.png" data-description="Professional Photo Retouching: Before & After Example" class="active-thumb" alt="Thumbnail 9">
+                        <img src="images/system/10.png" data-full="images/system/10.png" data-description="Professional Photo Retouching: Before & After Example" class="active-thumb" alt="Thumbnail 10">
+                        <img src="images/system/11.png" data-full="images/system/11.png" data-description="Professional Photo Retouching: Before & After Example" class="active-thumb" alt="Thumbnail 11">
+                        <img src="images/system/12.png" data-full="images/system/12.png" data-description="Professional Photo Retouching: Before & After Example" class="active-thumb" alt="Thumbnail 12">
+                        <img src="images/system/13.png" data-full="images/system/13.png" data-description="Professional Photo Retouching: Before & After Example" class="active-thumb" alt="Thumbnail 13">
                        
                     </div>
                 </div>
@@ -111,6 +112,39 @@
             }
         });
     </script>
-</body>
+        <!-- ================= CHATBOT BUTTON ================= -->
+    <div class="chatbot-btn" id="chat-btn">
+        <!-- Inline SVG Thunder Icon -->
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="yellow" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 2L3 14H12L11 22L21 10H14L13 2Z" />
+        </svg>
+    </div>
 
+<!-- CHATBOX / AI WINDOW -->
+<div class="chatbox" id="chatbox">
+    <div class="chat-header">
+        <span>Jomari Assistant</span>
+        <i class="fa-solid fa-xmark" id="chat-close"></i>
+    </div>
+
+    <div class="chat-messages" id="chat-messages">
+        <div class="bot-msg">👋 Hello! I'm Jomari. How can I help you today?</div>
+    </div>
+
+    <div class="chat-input-area">
+        <input type="text" id="chat-input" placeholder="Type a message...">
+        <button id="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+    </div>
+</div>
+
+    
+
+
+<script src="node.js"></script>
+<script src="chatbots.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
+</body>
 </html>

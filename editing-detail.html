@@ -6,6 +6,7 @@
     <title>Editing Detail | Jomari Abubo</title>
     <script src="https://kit.fontawesome.com/502646584c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chatbots.css">
 </head>
 <body class="liquid-body">
         <nav class="glass-nav">
@@ -54,10 +55,41 @@
         <p>2025 © Jomari Abubo Portfolio. All Rights Reserved. <i class="fa-solid fa-heart"></i></p>
     </div>
     
+       <!-- ================= CHATBOT BUTTON ================= -->
+    <div class="chatbot-btn" id="chat-btn">
+        <!-- Inline SVG Thunder Icon -->
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="yellow" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 2L3 14H12L11 22L21 10H14L13 2Z" />
+        </svg>
+    </div>
+
+<!-- CHATBOX / AI WINDOW -->
+<div class="chatbox" id="chatbox">
+    <div class="chat-header">
+        <span>Jomari Assistant</span>
+        <i class="fa-solid fa-xmark" id="chat-close"></i>
+    </div>
+
+    <div class="chat-messages" id="chat-messages">
+        <div class="bot-msg">👋 Hello! I'm Jomari. How can I help you today?</div>
+    </div>
+
+    <div class="chat-input-area">
+        <input type="text" id="chat-input" placeholder="Type a message...">
+        <button id="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+    </div>
+</div>
+
+    
     <script>
         var sidemenu = document.getElementById("sidemenu");
         function openmenu(){ sidemenu.style.right = "0"; }
         function closemenu(){ sidemenu.style.right = "-250px"; }
     </script>
+
+<script src="node.js"></script>
+<script src="chatbots.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
