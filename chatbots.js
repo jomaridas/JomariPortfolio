@@ -59,7 +59,7 @@
         });
 
         // ================== CONFIGURATION & PROFILE DATA ==================
-        const API_KEY = "AIzaSyAZseMBMPMXlEGIGRxD1Kcgl8hZ94_T2wk";
+        const API_KEY = "AIzaSyBrRDImfzSVJirymvVth2vjrjOnme_3Alc";
         const MODEL_NAME = "gemini-2.5-flash-preview-09-2025";
 
         const JOM_PROFILE_DATA = {
@@ -220,3 +220,4 @@ Guidelines:
             isFirstOpen = true; // Reset the flag so the welcome message reappears on next open
             chatInput.focus();
         };
+
