@@ -50,7 +50,7 @@
             bottom: 90px;
             right: 25px;
             width: 350px;
-            height: 450px;
+            height: 410px;
             display: none; /* hidden initially */
             flex-direction: column;
             /* Glassmorphism chatbox container */
