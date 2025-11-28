@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 // ================= CONFIG =================
-const GEMINI_API_KEY = "AIzaSyA8zT06IPiBqznQoAdCfLHzqulQtFdwZsc";
+const GEMINI_API_KEY = "AIzaSyAZseMBMPMXlEGIGRxD1Kcgl8hZ94_T2wk";
 const GEMINI_MODEL = "gemini-2.5-flash-preview-09-2025";
 
 const OPENAI_API_KEY = "YOUR_OPENAI_API_KEY_HERE"; // fallback to OpenAI
@@ -76,3 +76,4 @@ app.post("/api/chat", async (req, res) => {
 // ================== START SERVER ==================
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
