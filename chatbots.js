@@ -21,7 +21,7 @@ document.addEventListener("click", (e) => {
 
 // ================== CONFIGURATION ==================
 // REPLACE THIS WITH YOUR ACTUAL API KEY
-const API_KEY = "AIzaSyBmuQwFK7BAWfHoE7I7l_CTNP36oEwxVSA"; 
+const API_KEY = "AIzaSyAZseMBMPMXlEGIGRxD1Kcgl8hZ94_T2wk"; 
 const MODEL_NAME = "gemini-2.5-flash-preview-09-2025";
 
 // Jomari profile data (Kept and will be used by the AI)
@@ -170,3 +170,4 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 });
+
