@@ -3,7 +3,7 @@
 
 :root {
     --primary-color: #ff004f; /* Retain your existing accent color */
-    --secondary-color: #0d1223; /* Darker background */
+    --body-secondary: #0d1223; /* Darker background */
     --glass-bg: rgba(255, 255, 255, 0.05); /* Transparent white */
     --glass-border: rgba(255, 255, 255, 0.1);
     --text-color: #f0f0f0;
@@ -19,7 +19,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background: var(--secondary-color);
+    background: var(--body-secondary);
     color: var(--text-color);
     overflow-x: hidden; /* Prevent horizontal scroll from liquid effect */
 }
@@ -479,7 +479,7 @@ nav ul li a:hover::after{
     width: 100%;
 }
 .btn:hover{
-    color: var(--secondary-color);
+    color: var(--body-secondary);
     box-shadow: 0 0 15px var(--primary-color);
 }
 
@@ -529,7 +529,7 @@ nav ul li a:hover::after{
 .btn.btn2{
     display: inline-block;
     background: var(--primary-color);
-    color: var(--secondary-color);
+    color: var(--body-secondary);
     border: 2px solid var(--primary-color);
     margin-top: 40px;
     box-shadow: 0 5px 15px rgba(255, 0, 79, 0.5);
@@ -874,7 +874,7 @@ form .btn2{
     margin-right: 8px;
 }
 .btn-secondary:hover {
-    color: var(--secondary-color);
+    color: var(--body-secondary);
     background: var(--primary-color);
     box-shadow: 0 0 15px var(--primary-color);
 }

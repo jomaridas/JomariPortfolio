@@ -6,7 +6,7 @@
     <title>Editing Detail | Jomari Abubo</title>
     <script src="https://kit.fontawesome.com/502646584c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="chatbots.css">
+    <link rel="stylesheet" href="style-chatbot.css">
 </head>
 <body class="liquid-body">
         <nav class="glass-nav">
@@ -56,34 +56,87 @@
     </div>
     
       <!-- ================= CHATBOT BUTTON ================= -->
- <!-- Floating Chatbot Button -->
+
+ <!-- Enhanced Liquid Glass Chatbot Button -->
     <div id="chat-btn" class="chatbot-btn">
-        <i class="fas fa-comment-dots"></i>
+        <i class="fas fa-robot"></i>
     </div>
 
-    <!-- Chatbox Window -->
+    <!-- Enhanced Liquid Glass Chatbox -->
     <div id="chatbox" class="chatbox">
-        <div class="chat-header">
-            <span>JOM AI Assistant</span>
-            <div class="flex items-center gap-3">
-                <i class="fas fa-trash-alt" title="Clear Chat History" onclick="clearChat()"></i>
-                <i id="chat-close" class="fas fa-times" title="Close Chat"></i>
+        <!-- Welcome Animation -->
+        <div class="chatbox-welcome" id="chatbox-welcome">
+            <div class="welcome-content">
+                <div class="welcome-robot">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h1 class="welcome-title">Welcome!</h1>
+                <p class="welcome-subtitle">Your AI guide to Jomari's creative portfolio</p>
+                <div class="welcome-loader"></div>
             </div>
         </div>
         
-        <div id="chat-messages" class="chat-messages">
-            <!-- Messages will be appended here -->
-            <div id="welcome-screen">
-                <!-- Welcome content injected by JS -->
+        <!-- Chat Header with MODERN ICONS -->
+        <div class="chat-header">
+            <div style="display:flex;align-items:center;gap:12px;">
+                <span style="font-weight:800;color:var(--secondary-color);">JOM</span>
+                <span style="font-weight:600;">Assistant</span>
+            </div>
+            <div class="header-controls">
+                <!-- Theme Toggle Icon -->
+                <div class="modern-icon theme-switch-icon" id="theme-toggle" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <!-- Clear Chat Icon -->
+                <div class="modern-icon clear-chat-icon" 
+                    title="Clear Chat" 
+                    onclick="clearChat()">
+                    <i class="fas fa-trash"></i>
+                </div>
+                <!-- Close Chat Icon -->
+                <div id="chat-close" 
+                    class="modern-icon close-chat-icon" 
+                    title="Close">
+                    <i class="fas fa-times"></i>
+                </div>
             </div>
         </div>
 
+        <!-- Chat Messages -->
+        <div id="chat-messages" class="chat-messages"></div>
+
+        <!-- Suggestion Modal - NOW INSIDE CHATBOX -->
+        <div id="suggestion-modal" class="suggestion-modal">
+            <div class="suggestion-header">
+                <h3>Quick Questions</h3>
+                <div class="close-suggestions" id="close-suggestions">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="suggestion-grid" id="suggestion-grid">
+                <!-- Suggestions will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Chat Input Area -->
         <div class="chat-input-area">
-            <input type="text" id="chat-input" placeholder="Ask me about Jomari..." autocomplete="off">
-            <button id="send-btn" disabled>
+            <!-- Suggestion Button -->
+            <button class="suggestion-btn" id="suggestion-btn" title="Show Suggestions">
+                <i class="fas fa-lightbulb"></i>
+            </button>
+            
+            <!-- Chat Input -->
+            <textarea id="chat-input" placeholder="Ask about Jomari..." autocomplete="off" rows="1"></textarea>
+            
+            <!-- Send Button -->
+            <button id="send-btn" class="send-btn" disabled title="Send Message">
                 <i class="fas fa-paper-plane"></i>
             </button>
         </div>
+    </div>
+
+    
+    <!-- ================= CHATBOT END ================= -->
 
 
     
@@ -94,7 +147,7 @@
     </script>
 
 <script src="node.js"></script>
-<script src="chatbots.js"></script>
+<script src="script-chatbot.js"></script>
 <script src="script.js"></script>
 
 </body>
